@@ -1,0 +1,172 @@
+---
+title: "Project Proposal"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Group Info(Members)
+
+1.  Lakshmi Sai Akash Kandru(LK23E)(Leader)
+2.  Sai Nikhil Aratipamula(SA23L)
+3.  Sameera Rompicherla(SR23BA)
+4.  Nandhakumar Ranganathan Ganesh(NR23G)
+
+## Title
+
+**Predictive modeling of house prices in Ames**
+
+## Narative
+
+**Introduction**: The Ames Housing Dataset is a comprehensive collection of housing-related attributes designed to facilitate the analysis of residential properties in Ames, Iowa.
+This dataset offers valuable insights into various features of homes, ranging from physical characteristics to qualitative assessments of quality and condition.
+The observations in the dataset provide a rich source of information for understanding the real estate landscape in the Ames area.
+
+**Objective**: To apply regression analysis techniques to the Ames housing dataset to identify key factors influencing property values and predict housing prices.
+This project aims to explore and quantify the relationship between various housing features (such as lot size, overall quality and condition, year of construction, size of living areas, and number of rooms) and the final sale price of properties in Ames.
+The objective is to develop a robust predictive model that can accurately estimate housing prices based on these features, thereby providing insights into the housing market dynamics in Ames.
+This analysis will also evaluate the effectiveness of different regression models in real estate price prediction, contributing to a deeper understanding of real estate valuation and market trends
+
+**Data Source**: The dataset was originally collected through a comprehensive survey and documentation process by housing authorities and professionals in Ames, Iowa.
+The information includes both objective measurements, such as square footage and construction dates, and subjective assessments, such as quality and condition ratings.
+The dataset's primary purpose is to provide a detailed understanding of residential properties in the area, aiding in real estate analysis, market research, and decision-making processes.
+
+**Description:**
+
+The dataset comprises a diverse set of attributes, each providing distinct insights into the properties under consideration.
+These observations encompass details such as lot size, construction quality, overall condition, construction and remodel dates, basement characteristics, living area dimensions, bathroom counts, bedroom counts, kitchen counts, room totals, fireplace presence, garage specifications, and various porch and deck areas.
+Additionally, the dataset includes the crucial variable of the property's sale price, measured in dollars, serving as a key indicator for the economic value of the homes.
+
+**Variables Description**:
+
+1.  **LotArea**: Lot size in square feet.
+    -   Provides information about the total area of the property, including land and other outdoor spaces.
+2.  **OverallQual**: Overall quality of the house's material and finish.
+    -   Subjective rating on a scale from 1 to 9, reflecting the perceived quality of the construction materials and finishes.
+3.  **OverallCond**: Overall condition rating.
+    -   Subjective rating on a scale from 1 to 9, indicating the general well-being and maintenance level of the property.
+4.  **YearBuilt**: Original construction date.
+    -   Represents the year when the primary structure of the house was initially built.
+5.  **YearRemodAdd**: Remodel date.
+    -   Indicates the year when significant remodeling or additions were made to the property.
+6.  **BsmtFinSF1**: Type 1 finished square feet.
+    -   Quantifies the finished square footage of the basement area, categorized as Type 1.
+7.  **BsmtFinType2**: Type 2 finished square feet.
+    -   Represents the finished square footage of the basement area, categorized as Type 2.
+8.  **TotalBsmtSF**: Total square feet of basement area.
+    -   Encompasses both finished and unfinished square footage of the basement.
+9.  **FirstFlrSF**: First floor square feet.
+    -   Quantifies the total square footage of the first floor of the house.
+10. **SecondFlrSF**: Second floor square feet.
+    -   Represents the total square footage of the second floor of the house.
+11. **GrLivArea**: Above grade (ground) living area square feet.
+    -   Indicates the total square footage of above-ground living areas, excluding basements.
+12. **BsmtFullBath**: Number of full bathrooms in the basement.
+    -   Reflects the count of full bathrooms located in the basement.
+13. **BsmtHalfBath**: Number of half baths in the basement.
+    -   Represents the count of half bathrooms located in the basement.
+14. **FullBath**: Number of full bathrooms above ground.
+    -   Encompasses the total count of full bathrooms located above ground level.
+15. **HalfBath**: Number of half baths above ground.
+    -   Encompasses the total count of half bathrooms located above ground level.
+16. **BedroomAbvGr**: Number of Bedrooms above ground.
+    -   Represents the count of bedrooms located above ground level.
+17. **KitchenAbvGr**: Number of Kitchens above ground.
+    -   Reflects the count of kitchens located above ground level.
+18. **TotRmsAbvGrd**: Total rooms above ground (does not include bathrooms).
+    -   Encompasses the total count of rooms, excluding bathrooms, located above ground level.
+19. **Fireplaces**: Number of fireplaces.
+    -   Indicates the count of fireplaces present in the house.
+20. **GarageCars**: Size of garage in car capacity.
+    -   Represents the capacity of the garage in terms of the number of cars it can accommodate.
+21. **GarageArea**: Size of garage in square feet.
+    -   Quantifies the total square footage of the garage space.
+22. **WoodDeckSF**: Wood deck area in square feet.
+    -   Indicates the area, in square feet, covered by the wood deck.
+23. **OpenPorchSF**: Open porch area in square feet.
+    -   Quantifies the total area, in square feet, of open porch space.
+24. **EnclosedPorch**: Enclosed porch area in square feet.
+    -   Represents the area, in square feet, of enclosed porch space.
+25. **ThreeSsnPorch**: Three-season porch area in square feet.
+    -   Indicates the area, in square feet, dedicated to a three-season porch, typically usable in three out of the four seasons.
+26. **ScreenPorch**: Screen porch area in square feet.
+    -   Represents the area, in square feet, covered by a screened porch.
+27. **SalePrice**: The property's sale price in dollars.
+    -   Provides the final sale price of the property in US dollars, serving as a crucial variable for assessing the economic value of the homes.
+
+## Data Dictionary
+
+The full data set contains 1,359 homes and the following 27 variables:
+
+• `LotArea`: Lot size in square feet.
+
+• `OverallQual`: Overall quality of the house's material and finish.
+The scale ranges from 1 (Very Poor) to 9 (Very Excellent).
+
+• `OverallCond`: Overall condition rating.
+The scale ranges from 1 (Very Poor) to 9 (Very Excellent).
+
+• `YearBuilt`: Original construction date.
+
+• `YearRemodAdd`: Remodel date.
+
+• `BsmtFinSf1`: Type 1 finished square feet.
+
+• `BsmtFinType2`: Type 2 finished square feet.
+
+• `TotalBsmtSf`: Total square feet of basement area.
+
+• `FirstFlrSf`: First floor square feet.
+
+• `SecondFlrSf`: Second floor square feet.
+
+• `GrLivArea`: Above grade (ground) living area square feet.
+
+• `BsmtFullBath`: Number of full bathrooms in the basement.
+
+• `BsmtHalfBath`: Number of half baths in the basement.
+
+• `FullBath`: Number of full bathrooms above ground.
+
+• `HalfBath`: Number of half baths above ground.
+
+• `BedroomAbvGr`: Number of Bedrooms above ground.
+
+• `KitchenAbvGr`: Number of Kitchens above ground.T
+
+• `TotRmsAbvGrd`: Total rooms above ground (does not include bathrooms).
+
+• `Fireplaces`: Number of fireplaces.
+
+• `GarageCars`: Size of garage in car capacity.
+
+• `GarageArea`: Size of garage in square feet.
+
+• `WoodDeckSf`: Wood deck area in square feet.
+
+• `OpenPorchSf`: Open porch area in square feet.
+
+• `EnclosedPorch`: Enclosed porch area in square feet.
+
+• `ThreeSsnProch`: Three season porch area in square feet.
+
+• `ScreenPorch`: Screen porch area in square feet.
+
+• `SalePrice`: The property's sale price in dollars.
+
+## Evidence of the Data
+
+First ten rows of the data set (loaded as a `tibble` or `data.frame`) using the `head` 
+
+```{r}
+data = read.csv("ames_housing.csv", header=T)
+print(head(data, 10))
+```
